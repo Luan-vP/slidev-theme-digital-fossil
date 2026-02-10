@@ -2,6 +2,13 @@
   "name": "slidev-theme-digital-fossil",
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "components",
+    "layouts",
+    "styles",
+    "setup",
+    "public"
+  ],
   "keywords": [
     "slidev-theme",
     "slidev"
