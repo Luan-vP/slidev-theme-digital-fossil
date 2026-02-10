@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Cinzel:wght@600&family=IBM+Plex+Mono&display=swap');
+
+/* Digital Fossil Theme */
+:root {
+  --slidev-background: #EAE2CF;
+  --slidev-slide-container-background: var(--slidev-background);
+  --slidev-color-primary: #B86F3C;
+  --slidev-color-secondary: #4A7C7C;
+  --slidev-color-text: #2E261D;
+  --slidev-color-heading: #4E3B2C;
+  --slidev-color-highlight: #D8A657;
+  --slidev-color-accent: #5D7EA3;
+
+  font-family: 'EB Garamond', 'Crimson Pro', serif;
+}
+
+html, body {
+  background: var(--slidev-background);
+  color: var(--slidev-color-text);
+  font-size: 1.1rem;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  color: var(--slidev-color-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 2.6em;
+  border-bottom: 2px solid var(--slidev-color-highlight);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: var(--slidev-color-secondary);
+  font-size: 1.8em;
+}
+
+a {
+  color: var(--slidev-color-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--slidev-color-accent);
+}
+
+a:hover {
+  color: var(--slidev-color-secondary);
+  border-bottom-color: var(--slidev-color-secondary);
+}
+
+code {
+  background: #F5EBDC;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--slidev-color-primary);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Fossil-inspired list styling */
+ul,
+ol {
+  margin: 0.8em 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 2.4em;
+}
+
+ul li {
+  position: relative;
+  margin: 0.45em 0;
+  padding-left: 0.4em;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -1.8em;
+  top: 0.65em;
+  transform: translateY(-50%) rotate(-8deg);
+  width: 1.9em;
+  height: 1.9em;
+  background-image: url('../public/images/fossil-solid-favicon.png');
+  background-size: 88%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* box-shadow: 0 2px 4px rgba(46, 38, 29, 0.2); */
+}
+
+ol {
+  counter-reset: fossil-counter;
+  list-style: none;
+  padding-left: 1.9em;
+}
+
+ol li {
+  position: relative;
+  counter-increment: fossil-counter;
+  margin: 0.5em 0;
+  padding-left: 0.6em;
+}
+
+ol li::before {
+  content: counter(fossil-counter, decimal-leading-zero);
+  position: absolute;
+  left: -1.6em;
+  top: 0.65em;
+  transform: translateY(-50%);
+  padding: 0.1em 0.45em 0.05em;
+  border: 2px solid var(--slidev-color-secondary);
+  border-radius: 999px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+  color: var(--slidev-color-secondary);
+  background: linear-gradient(135deg, rgba(232, 208, 168, 0.85), rgba(255, 255, 255, 0.75));
+  box-shadow: 0 3px 6px rgba(46, 38, 29, 0.2);
+}
+
+.mermaid svg {
+  font-family: 'EB Garamond', 'Crimson Pro', serif;
+}
+
+/* Optional subtle fossil grain texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.08;
+  pointer-events: none;
+}
