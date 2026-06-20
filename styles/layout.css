@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Cinzel:wght@600&family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono&display=swap');
 
 /* Digital Fossil Theme */
 :root {
@@ -25,10 +25,10 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+  font-weight: 600;
   color: var(--slidev-color-heading);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h1 {
@@ -116,7 +116,7 @@ ol li::before {
   padding: 0.1em 0.45em 0.05em;
   border: 2px solid var(--slidev-color-secondary);
   border-radius: 999px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.8em;
   letter-spacing: 0.05em;
   color: var(--slidev-color-secondary);
@@ -125,7 +125,7 @@ ol li::before {
 }
 
 .mermaid svg {
-  font-family: 'EB Garamond', 'Crimson Pro', serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Optional subtle fossil grain texture */
