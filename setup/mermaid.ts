@@ -63,6 +63,6 @@ export default defineMermaidSetup(() => ({
       fill: var(--fossil-highlight);
       stroke: var(--slidev-color-heading);
     }
-    ${isCircuit() ? '.flowchart-link { stroke-width: 3px !important; }' : ''}
+    ${isCircuit() ? '.flowchart-link:not(.edge-thickness-invisible) { stroke-width: 3px !important; }' : ''}
   `,
 }))
