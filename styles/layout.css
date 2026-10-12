@@ -137,3 +137,46 @@ body::before {
   opacity: 0.08;
   pointer-events: none;
 }
+
+/* ==========================================================================
+   Circuit palette — gold traces on solder-mask green.
+   Opt in per deck with `themeConfig: { palette: circuit }` in the headmatter;
+   setup/main.ts mirrors it onto <html data-palette>. Parchment stays default.
+   ========================================================================== */
+html[data-palette='circuit'] {
+  --slidev-background: #0F3B2A;
+  --slidev-color-primary: #D4A64A;   /* gold trace */
+  --slidev-color-secondary: #E8C46A; /* polished gold */
+  --slidev-color-text: #DCE5D6;      /* silkscreen */
+  --slidev-color-heading: #F2E7C9;   /* bright silkscreen */
+  --slidev-color-highlight: #D4A64A;
+  --slidev-color-accent: #7FD1B9;    /* lit LED */
+  --fossil-board-deep: #0A2A1E;
+}
+
+/* Every slide is a stretch of board: faint gold traces behind the content. */
+html[data-palette='circuit'] .slidev-layout {
+  background-color: var(--slidev-background);
+  color: var(--slidev-color-text);
+  background-image: url('../public/images/circuit-traces.svg');
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+html[data-palette='circuit'] code {
+  background: var(--fossil-board-deep);
+}
+
+html[data-palette='circuit'] ul li::before {
+  background-image: url('../public/images/fossil-line-favicon.png');
+}
+
+/* Numbered like a solder pad: dark centre, gold ring. */
+html[data-palette='circuit'] ol li::before {
+  background: var(--fossil-board-deep);
+  box-shadow: 0 0 6px rgba(212, 166, 74, 0.35);
+}
+
+html[data-palette='circuit'] body::before {
+  opacity: 0.05;
+}
