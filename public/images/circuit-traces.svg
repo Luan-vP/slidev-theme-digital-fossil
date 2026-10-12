@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Tileable gold PCB traces: every trace leaving one edge re-enters at the
+       matching point on the opposite edge. Crossings sit on vias, as they
+       would on a real two-layer board. Opacity is baked in so the tile can be
+       used directly as a background image. -->
+  <g fill="none" stroke="#D4A64A" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 40 H70 L90 60 H130 L150 40 H200" />
+    <path d="M180 0 V90 L160 110 V150 L180 170 V200" />
+    <path d="M0 120 H40 L60 140 H105" />
+    <path d="M95 95 H128" />
+    <path d="M30 100 V75 H55" />
+    <path d="M140 170 H100 L85 185 H60" />
+  </g>
+  <g fill="#D4A64A" fill-opacity="0.26">
+    <circle cx="110" cy="140" r="5" />
+    <circle cx="90" cy="95" r="4" />
+    <circle cx="133" cy="95" r="4" />
+    <circle cx="55" cy="185" r="4" />
+    <rect x="58" y="68" width="6" height="14" rx="1" />
+    <rect x="68" y="68" width="6" height="14" rx="1" />
+    <rect x="78" y="68" width="6" height="14" rx="1" />
+  </g>
+  <g fill="#0F3B2A" stroke="#D4A64A" stroke-opacity="0.3" stroke-width="2">
+    <circle cx="180" cy="40" r="5" />
+    <circle cx="30" cy="100" r="4" />
+    <circle cx="140" cy="170" r="4" />
+  </g>
+</svg>

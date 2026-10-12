@@ -29,6 +29,22 @@ theme: <b>digital-fossil</b>
 
 Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-theme).
 
+## Palettes
+
+Parchment is the default. For gold traces on solder-mask green, opt a deck
+into the circuit palette:
+
+<pre><code>---
+theme: digital-fossil
+themeConfig:
+  palette: <b>circuit</b>
+---</code></pre>
+
+Slides get a tiled gold-trace background, silkscreen text, gold line-fossil
+bullets and solder-pad numbering, and Mermaid diagrams switch to heavy gold
+traces. Artwork drawn for light paper (dark-ink SVGs, parchment renders) needs
+recolouring before a deck opts in. Preview it with `example-circuit.md`.
+
 ## Layouts
 
 This theme provides the following layouts:

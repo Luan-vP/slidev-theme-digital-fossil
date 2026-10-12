@@ -1,3 +1,4 @@
+import { configs } from '@slidev/client'
 import { defineMermaidSetup } from '@slidev/types'
 
 const fossilThemeVariables = {
@@ -16,9 +17,30 @@ const fossilThemeVariables = {
   clusterBorder: '#4A7C7C',
 }
 
+// Circuit palette (opt in with `themeConfig: { palette: circuit }`): nodes are
+// components on solder-mask green, edges are heavy gold traces.
+const circuitThemeVariables = {
+  ...fossilThemeVariables,
+  background: '#0F3B2A',
+  primaryColor: '#0A2A1E',
+  primaryTextColor: '#F2E7C9',
+  primaryBorderColor: '#D4A64A',
+  lineColor: '#D4A64A',
+  secondaryColor: '#145039',
+  tertiaryColor: '#1C5C43',
+  textColor: '#DCE5D6',
+  mainBkg: '#0A2A1E',
+  nodeBorder: '#D4A64A',
+  clusterBkg: '#145039',
+  clusterBorder: '#D4A64A',
+  edgeLabelBackground: '#0F3B2A',
+}
+
+const isCircuit = () => configs.themeConfig?.palette === 'circuit'
+
 export default defineMermaidSetup(() => ({
   theme: 'base',
-  themeVariables: fossilThemeVariables,
+  themeVariables: isCircuit() ? circuitThemeVariables : fossilThemeVariables,
   themeCSS: `
     :root {
       --fossil-primary: var(--slidev-color-primary);
@@ -41,5 +63,6 @@ export default defineMermaidSetup(() => ({
       fill: var(--fossil-highlight);
       stroke: var(--slidev-color-heading);
     }
+    ${isCircuit() ? '.flowchart-link:not(.edge-thickness-invisible) { stroke-width: 3px !important; }' : ''}
   `,
 }))
